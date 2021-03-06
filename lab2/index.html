@@ -1,15 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    lab2
-</body>
-
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab2</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="navbar">
+        <img src="./icons/brandLogo.svg" alt="figma logo" class="figma-logo" />
+        <div class="menu">
+          <div class="link-container"><a class="link-menu">Home</a></div>
+          <div class="link-container"><a class="link-menu">Product</a></div>
+          <div class="link-container"><a class="link-menu">About</a></div>
+          <div class="link-container"><a class="link-menu">Contact</a></div>
+        </div>
+        <button class="login">Login</button>
+        <button class="mobile-menu"></button>
+      </div>
+      <div class="introduction">
+        <h1 class="headline">Work at the speed of thought</h1>
+        <p class="sub-headline">
+          Most calendars are designed for teams. Slate is designed for
+          freelancers who want a simple way to plan their shedule.
+        </p>
+      </div>
+      <div class="button-group">
+        <button class="try-button">Try For Free</button>
+        <button class="info-button">Learn More</button>
+      </div>
+    </header>
+    <div class="bg-img"></div>
+    <div class="block">
+      <h1 class="block-header" style="text-transform: uppercase">Features</h1>
+      <p class="block-sub-header">
+        Most calendars are designed for teams. Slate is designed for freelancers
+        who want a simple way to plan their shedule.
+      </p>
+      <div class="features-card">
+        <div class="features-img">
+          <img class="chatbot-img" src="./img/featuresBig.png" />
+          <img class="front-img" src="./img/featuresSmall.png" />
+        </div>
+        <div class="vertical-container">
+          <div class="specific-feature">
+            <img src="./icons/feature-1.svg" class="feature-icon" />
+            <h2 class="h2-feature">A single resourse of truth</h2>
+            <p class="p-feature">
+              When you add work to your Slate calendar we automatically
+              calculate useful insights
+            </p>
+          </div>
+          <div class="specific-feature">
+            <img src="./icons/feature-2.svg" class="feature-icon" />
+            <h2 class="h2-feature">Intuitive <br />interface</h2>
+            <p class="p-feature">
+              When you add work to your Slate calendar we automatically
+              calculate useful insights
+            </p>
+          </div>
+          <div class="specific-feature">
+            <img src="./icons/feature-3.svg" class="feature-icon" />
+            <h2 class="h2-feature">Or with rules</h2>
+            <p class="p-feature">
+              When you add work to your Slate calendar we automatically
+              calculate useful insights
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <h1 class="block-header">Contents</h1>
+      <p class="block-sub-header">
+        We focus on ergonomics and meeting you where you work. <br />It's only
+        keystroke away
+      </p>
+      <div class="content-container">
+        <div class="content-card">
+          <h2 class="card-header">Work</h2>
+          <p class="card-paragraph">
+            Ever wandered if you're too reliant on a client for work? Slate
+            helps you identify.
+          </p>
+          <button class="block-button">Sign Up</button>
+          <img src="./img/MacbookPro.png" class="content-img" />
+        </div>
+        <div class="content-card">
+          <h2 class="card-header">Design with real data</h2>
+          <p class="card-paragraph">
+            Ever wandered if you're too reliant on a client for work? Slate
+            helps you identify.
+          </p>
+          <button class="block-button">Try For Free</button>
+          <img src="./img/BoardsNotifications.png" class="content-img" />
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <h1 class="block-header">Gallery</h1>
+      <p class="block-sub-header">
+        We focus on ergonomics and meeting you where you work. <br />It's only
+        keystroke away
+      </p>
+      <div class="gallery-row">
+        <img class="img-gallery" src="./img/gallery-img-1.png" />
+        <img class="img-gallery" src="./img/gallery-img-2.png" />
+        <img class="img-gallery" src="./img/gallery-img-3.png" />
+        <img class="img-gallery" src="./img/gallery-img-4.png" />
+      </div>
+      <div class="gallery-row">
+        <img class="img-gallery" src="./img/gallery-img-5.png" />
+        <img class="img-gallery" src="./img/gallery-img-6.png" />
+        <img class="img-gallery" src="./img/gallery-img-7.png" />
+      </div>
+      <div class="mobile-column">
+        <img class="img-gallery" src="./img/gallery-img-sm-1.png" />
+        <img class="img-gallery" src="./img/gallery-img-sm-2.png" />
+        <img class="img-gallery" src="./img/gallery-img-sm-3.png" />
+        <img class="img-gallery" src="./img/gallery-img-sm-4.png" />
+      </div>
+      <button class="white-button">See more</button>
+    </div>
+    <div class="block">
+      <h1 class="block-header">Partners</h1>
+      <p class="block-sub-header">
+        We focus on ergonomics and meeting you where you work. <br />It's only
+        keystroke away
+      </p>
+      <div class="partners-icons-container">
+        <div class="three-icons">
+          <img
+            class="partner-icon"
+            id="icon-left"
+            src="./icons/logos_apple-app-store.svg"
+          />
+          <img class="partner-icon" src="./icons/logos_apiary.svg" />
+          <img
+            class="partner-icon icon-middle"
+            src="./icons/logos_android-icon.svg"
+          />
+        </div>
+        <div class="three-icons">
+          <img
+            class="partner-icon" id="icon-left"
+            src="./icons/logos_basecamp.svg"
+          />
+          <img class="partner-icon" src="./icons/logos_airbnb.svg" />
+          <img
+            class="partner-icon"
+            id="icon-right"
+            src="./icons/logos_ibm.svg"
+          />
+        </div>
+      </div>
+      <button class="white-button">All partners</button>
+    </div>
+    <div class="block">
+      <h1 class="block-header">Testimonials</h1>
+      <div class="card-person-container">
+        <div class="card-person">
+          <img class="person-icon" src="./img/testimonial-img-1.png" />
+          <h2 class="person-name">Claire Bell<br />Designer</h2>
+          <p class="person-statement">
+            Slate helps you see how many more days you need to work to reach
+            your financial <br />goal for the month and year. Slate helps<br />
+            you see how many more days <br />you need to work to reach your
+            financial <br />goal for the month and year.your financial goal for
+            the month and year.
+          </p>
+        </div>
+        <div class="card-person">
+          <img class="person-icon" src="./img/testimonial-img-2.png" />
+          <h2 class="person-name">Francisco Lane<br />Designer</h2>
+          <p class="person-statement">
+            Slate helps you see how many more days you need to work to reach
+            your financial<br />
+            goal for the month and year. Slate helps<br />
+            you see how many more days<br />
+            you need to work to reach your financial <br />goal for the month
+            and year.
+          </p>
+        </div>
+        <div class="card-person">
+          <img class="person-icon" src="./img/testimonial-img-3.png" />
+          <h2 class="person-name">Ralph Fisher<br />Designer</h2>
+          <p class="person-statement">
+            Slate helps you see how many more days you need to work to reach
+            your financial<br />
+            goal for the month and year. Slate helps<br />
+            you see how many more days<br />
+            you need to work to reach your financial <br />goal for the month
+            and year.
+          </p>
+        </div>
+        <div class="card-person">
+          <img class="person-icon" src="./img/testimonial-img-4.png" />
+          <h2 class="person-name">Jorge Murphy<br />Designer</h2>
+          <p class="person-statement">
+            Slate helps you see how many more days you need to work to reach
+            your financial<br />
+            goal for the month and year. Slate helps<br />
+            you see how many more days<br />
+            you need to work to reach your financial <br />goal for the month
+            and year.
+          </p>
+        </div>
+        <div class="card-person-mobile">
+          <img class="person-icon" src="./img/testimonial-img-mob-1.png" />
+          <h2 class="person-name">Wade Steward<br />Designer</h2>
+          <p class="person-statement">
+            Slate helps you see how many more days you need to work to reach
+            your financial goal for the month and year. Slate helps you see how
+            many more days you need to work to reach your financial goal for the
+            month and year.your financial goal for the month and year.
+          </p>
+        </div>
+        <div class="card-person-mobile">
+          <img class="person-icon" src="./img/testimonial-img-mob-2.png" />
+          <h2 class="person-name">Philip Watson<br />Designer</h2>
+          <p class="person-statement">
+            Slate helps you see how many more days you need to work to reach
+            your financial goal for the month and year. Slate helps you see how
+            many more days you need to work to reach your financial goal for the
+            month and year.your financial goal for the month and year.
+          </p>
+        </div>
+        <div class="card-person-mobile">
+          <img class="person-icon" src="./img/testimonial-img-2.png" />
+          <h2 class="person-name">Arthur Wilson<br />Designer</h2>
+          <p class="person-statement">
+            Slate helps you see how many more days you need to work to reach
+            your financial goal for the month and year. Slate helps you see how
+            many more days you need to work to reach your financial goal for the
+            month and year.your financial goal for the month and year.
+          </p>
+        </div>
+        <div class="card-person-mobile">
+          <img class="person-icon" src="./img/testimonial-img-mob-4.png" />
+          <h2 class="person-name">Regina Black<br />Designer</h2>
+          <p class="person-statement">
+            Slate helps you see how many more days you need to work to reach
+            your financial goal for the month and year. Slate helps you see how
+            many more days you need to work to reach your financial goal for the
+            month and year.your financial goal for the month and year.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="block" id="grey-bg">
+      <div class="open-type-container">
+        <div class="open-type-left-container">
+          <h1 class="block-header" id="center-text">OpenType feature and Variable fonts</h1>
+          <button class="block-button">Try For Free</button>
+        </div>
+        <img
+          class="lightning-fast-prototyping"
+          src="./img/lighnting-fast-prototyping.png"
+        />
+        <img
+          class="fast-prototyping-mobile"
+          src="./img/adv-sm-img.png"
+        />
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-links">
+        <h2 class="footer-heading">Fingertipe</h2>
+        <a class="footer-anchor">Home</a>
+        <a class="footer-anchor">Examples</a>
+        <a class="footer-anchor">Pricing</a>
+        <a class="footer-anchor">Updates</a>
+      </div>
+      <div class="footer-links">
+        <h2 class="footer-heading">Resourses</h2>
+        <a class="footer-anchor">Home</a>
+        <a class="footer-anchor">Examples</a>
+        <a class="footer-anchor">Pricing</a>
+        <a class="footer-anchor">Updates</a>
+      </div>
+      <div class="footer-links">
+        <h2 class="footer-heading">About</h2>
+        <a class="footer-anchor">Home</a>
+        <a class="footer-anchor">Examples</a>
+        <a class="footer-anchor">Pricing</a>
+        <a class="footer-anchor">Updates</a>
+      </div>
+      <div class="contacts-container">
+        <img src="./icons/map-marker.svg">
+        <p class="contact">7480 Mockingbird Hill undefined</p>
+        <img src="./icons/phone.svg">
+        <p class="contact">(239) 555-0108</p>
+        <div class="social-media">
+          <img src="./icons/twitter.svg">
+          <img src="./icons/facebook.svg">
+          <img src="./icons/instagram.svg">
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
