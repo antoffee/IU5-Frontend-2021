@@ -1,3 +1,77 @@
+:root {
+    --my-background-color: red;
+}
+
+body {
+    margin: 0;
+}
+
 .divClass {
     background-color: aqua;
+}
+
+.overflowTest {
+    overflow: scroll;
+    border: 1px solid blue;
+    width: 200px;
+    height: 100px;
+}
+
+.position1 {
+    background-color: brown;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 200px;
+    height: 100px;
+}
+
+.position2 {
+    background-color: burlywood;
+    position: relative;
+    height: 400px;
+}
+
+.positionSticky {
+    background-color: chartreuse;
+    top: 20px;
+    position: sticky;
+    z-index: 20;
+}
+
+.flexWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    height: 600px;
+}
+
+.flexContainer {
+    display: flex;
+    align-items: baseline;
+    /* flex-direction: column; */
+    background-color: darkblue;
+    background-color: red;
+}
+
+.flexContainer-flexItem {
+    height: 50px;
+    border: 1px solid white;
+    color: white;
+    padding: 0px 5px;
+}
+
+.flexContainer-flexItem_small {
+    height: 20px;
+}
+
+.prettyText {
+    color: var(--my-background-color);
+}
+
+@media screen and (max-width: 1000px) {
+    .prettyText {
+        color: blue;
+    }
 }
