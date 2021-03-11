@@ -8,7 +8,8 @@
  * '4 и -6, 2, 1, может 9, 63, -134 и 566]' -> {min: -134, max: 566}
  */
 function getMinMax(str) {
-    // code here
+  let match = str.match(/[-+]?[0-9]*\.?[0-9]+/g);
+  return { min: Math.min.apply(null, match), max: Math.max.apply(null, match) };
 }
 
 module.exports = getMinMax;
