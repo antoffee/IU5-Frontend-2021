@@ -1,0 +1,16 @@
+name: Labs Test
+
+on: push
+
+jobs:
+  lab3:
+    runs-on: ubuntu-16.04
+    name: Lab №3
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: npm install
+      - run: npm run test-lab-3
