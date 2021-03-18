@@ -1,4 +1,5 @@
 /**
+ * @param {Array} arr
  * Напишите функцию get1DArray(arr),
  * на вход подается массив бесконечной вложенности массивов arr
  * необходимо вернуть одномерный массив
@@ -17,7 +18,10 @@
 */
 
 function get1DArray(arr) {
-    //code here
+  return arr.reduce(function (accumulator, currentValue) {
+    let res = Array.isArray(currentValue)? get1DArray(currentValue):(currentValue)
+    return accumulator.concat (res);
+  }, []);
 }
 
 module.exports = get1DArray;
