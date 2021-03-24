@@ -23,8 +23,8 @@ test('getAnagramms 3', () => {
 });
 test('getAnagramms 4', () => {
     expect(getAnagramms(['мир', '222'])).toEqual([
-        ["222"],
         ["мир"],
+        ["222"],
     ]);
 });
 

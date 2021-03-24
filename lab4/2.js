@@ -1,4 +1,5 @@
 /**
+ * @param {String} str
  * Напишите функцию isPalindrome(str),
  * входные данные - строкa
  * выходные данные - boolean - является ли переданная строка палиндромом
@@ -7,7 +8,7 @@
  * "тот" -> true
  */
 function isPalindrome(str) {
-    //code here
+  return str.split("").reverse().join("") == str ? true : false;
 }
 
 module.exports = isPalindrome;
