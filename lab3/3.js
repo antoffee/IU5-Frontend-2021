@@ -8,7 +8,7 @@
  */
 
 function multiplyArray(arr, n) {
-   return arr.map(item=>(((typeof item) === 'number') ? item*n : item));
+  return arr.map((item) => (typeof item === "number" ? item * n : item));
 }
 
 module.exports = multiplyArray;
