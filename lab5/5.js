@@ -44,7 +44,7 @@ function makeRoute(arr) {
     }
     if (searchres !== undefined) res.push(searchres);
   }
-  console.log(res);
+  //console.log(res);
   return res;
 }
 
