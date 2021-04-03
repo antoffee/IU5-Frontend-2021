@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #dac7ad;
+}
+
+.task {
+    background: #6F4E37;
+    margin: 20px;
+    font-size: 30px;
+}
+
+#first-task {
+    height: 200px;
+    width: 200px;
+}
+
+#second-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black solid 2px;
+    height: 200px;
+    width: 200px;
+    font-size: 100px;
+    border-radius: 10px;
+}
+
+#third-task {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    height: auto;
+}
+
+#list-button {
+    font-size: 30px;
+    color: #fcf5e4;
+    width: 400px;
+    background: #442d25;
+    border-radius: 5px;
+}
+
+#list {
+    width: 100%;    
+}
+
+#list::-webkit-scrollbar {
+    width: 12px;              
+  }
+#list::-webkit-scrollbar-track {
+    background: #947761;        
+  }
+#list::-webkit-scrollbar-thumb {
+    background-color: #33241f;    
+    border-radius: 20px;       
+    border: 3px solid #442d25;  
+  }
+
+.list-hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.list-visible {
+    max-height: 400px;
+    overflow: auto;
+    border: solid 1px #c5a78a;
+    padding: 2px;
+}
+
+.list-item {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    border: solid 1px #947761;
+    color: #fcf5e4;
+}
+
+#fourth-task {
+    height: 800px;
+    width: 800px;
+    border: black solid 5px;
+    position: relative;
+    padding: 5px;
+}
+
+#heart {
+    position: absolute;
+    width: 100px;
+    height: 80px;
+}
+
+#heart:before, #heart:after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #33241f;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+#fifth-task {
+    background: #dac7ad;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#series-button {
+    height: 100px;
+    font-size: 30px;
+    color: #fcf5e4;
+    background: #442d25;
+    border-radius: 5px;
+}
+
+.one-serial {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.one-episode {
+    width: 300px;
+    border: black solid 1px;
+    margin: 10px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
