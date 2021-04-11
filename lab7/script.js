@@ -18,7 +18,7 @@ const forecast_params = {
 function temperature(num) {
   return num > 0 ? `+${Math.round(num)}` : `${Math.round(num)}`;
 }
-console.log(temperature(3));
+
 function AddUrlParams(url, params) {
   Object.entries(params).forEach(([key, val]) => {
     url.searchParams.append(key, val);
@@ -27,17 +27,13 @@ function AddUrlParams(url, params) {
 async function GetData(url) {
   return fetch(url)
     .then((data) => data.json())
-    .then((data) => data)
-    .catch((err) => {
-      console.log(err);
-    });
+    .then((data) => data);
 }
-function ShowErr(err) {
-  console.log(err);
-  document.getElementsByClassName("weather-container")[0].innerHTML =
-    "<h1>404 NOT FOUND</h1>";
-  document.getElementsByClassName("weather-container")[0].innerHTML +=
-    '<img src="./img/error.jpg" style="width:100%"/>';
+function ShowErr() {
+  document.getElementById("city").innerHTML = "NOT FOUND";
+  document.getElementsByClassName(
+    "weather-container"
+  )[0].style.backgroundImage = "url('img/error.jpg')";
 }
 function FillWeather(data) {
   ChangeWeatherBackground(data.weather[0].icon);
@@ -126,32 +122,27 @@ function ChangeWeatherBackground(str) {
 document.addEventListener("DOMContentLoaded", () => {
   AddUrlParams(weather_url, weather_params);
   AddUrlParams(forecast_url, forecast_params);
-  GetData(weather_url) /*.then((data) => console.log(data))*/
-    .then((data) => {
-      console.log(data);
-      FillWeather(data);
-    });
+  GetData(weather_url).then((data) => {
+    FillWeather(data);
+  });
   GetData(forecast_url)
     .then((data) => {
-      console.log(data);
       FillForecast(data);
     })
     .catch((err) => {
-      ShowErr(err);
+      ShowErr();
     });
 });
 
 document.getElementById("search-btn").addEventListener("click", () => {
   let city = document.getElementById("search-box").value;
-  console.log(city);
-  console.log(weather_url.search);
+
   weather_url.searchParams.delete("q");
   weather_url.searchParams.append("q", city);
   forecast_url.searchParams.delete("q");
   forecast_url.searchParams.append("q", city);
-  GetData(weather_url) /*.then((data) => console.log(data))*/
+  GetData(weather_url)
     .then((data) => {
-      console.log(data);
       FillWeather(data);
     })
     .catch((err) => {
@@ -159,7 +150,6 @@ document.getElementById("search-btn").addEventListener("click", () => {
       return;
     });
   GetData(forecast_url).then((data) => {
-    console.log(data);
     FillForecast(data);
   });
 });
