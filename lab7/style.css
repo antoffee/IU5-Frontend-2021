@@ -1,0 +1,155 @@
+body {
+    background: #fff0da;
+}
+
+.all-inclusive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 50px;
+    margin: 5px;
+}
+
+.search-container {
+    display: flex;
+    background: #eecb9a;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+#search-box {
+    height: 50px;
+    font-size: 30px;
+    margin: 10px;
+}
+
+#search-btn {
+    margin: 5px;
+}
+
+.button-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    border-radius: 10px;
+    align-items: center;
+    background-size: cover;
+    padding: 20px;
+}
+
+@media (max-width:1020px) {
+    .weather-container {
+        width: 94vw;
+    }
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #fff;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.weather-now {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border: solid 2px #fff;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#city {
+    font-size: 40px;
+    margin: 5px 25px;
+}
+
+#discription {
+    display: flex;
+    align-items: center;
+    margin: 5px 30px;
+}
+
+#temperature {
+    margin: 5px 40px;
+}
+
+.forecast-weather {
+    display: flex;
+    flex-direction: row;
+}
+
+.forecast-info {
+    margin: 5px;
+    align-items: center;
+    border: solid 2px #fff;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.forecast-temp {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:600px) {
+    .weather-container {
+        width: 80vw;
+    }
+    .weather-now {
+        width: auto;
+
+    }
+    .forecast-weather {
+        display: flex;
+        flex-direction: column;
+    }
+    .search-container {
+        width: 100%;
+        align-items: center;
+    }
+    #search-box {
+        font-size: 20px;
+        width: 70%;
+    }
+    .icon {
+        width: 30px;
+    }
+    #search-btn {
+        width: 40px;
+        margin: 1px;
+        height: 40px;
+        padding: 5px;
+    }
+    .button-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media(max-width:450px){
+    .weather-now {
+        font-size: 10px;
+    }
+}
+@media (max-width:350px) {
+    
+    .weather-card{
+        width: 100%;
+    }
+    #discription{
+        font-size: 15px;
+    }
+}
