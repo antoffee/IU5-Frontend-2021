@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Lab7</title>
-</head>
+  </head>
 
-<body>
-
-</body>
-
+  <body>
+    <div class="all-inclusive">
+      <div class="search-container">
+        <input id="search-box" type="text" placeholder="Введите город" />
+        <button id="search-btn"><img src="./icons/search.svg" class="button-icon" /></button>
+      </div>
+      <div class="weather-container">
+        <div class="weather-card">
+          <h2 id="city"></h2>
+          <h1 id="temperature"></h1>
+            <h2 id="discription"></h2>
+          <div class="weather-now">
+            <img src="./icons/wind.svg" class="icon" />
+            <h3 id="wind"></h3>
+            <img src="./icons/himidity.svg" class="icon" />
+            <h3 id="humidity"></h3>
+            <img src="./icons/pressure.svg" class="icon" />
+            <h3 id="pressure"></h3>
+          </div>
+        </div>
+        <div class="forecast-weather">
+          <div class="forecast-info">
+            <h3 class="date"></h3>
+            <h1 class="forecast-temp">
+          </div>
+          <div class="forecast-info">
+            <h3 class="date"></h3>
+            <h1 class="forecast-temp">
+          </div>
+          <div class="forecast-info">
+            <h3 class="date"></h3>
+            <h1 class="forecast-temp">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
 </html>
