@@ -1,13 +1,127 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #9e776f;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  border: solid #442d25 2px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 15px;
+}
+@media(max-width:500px){
+  .card{
+    width: 100%;
+  }
+}
+
+.add-todo {
+  background: #ffc7b3;
+  border: #442d25 solid 1px;
+  border-radius: 5px;
+}
+
+.add-todo:focus {
+  border: #442d25 solid 1px;
+  
+  outline: none;
+}
+
+.add-btn {
+  border: #442d25 solid 1px;
+  border-radius: 5px;
+  background: #442d25;
+  color: #ffc7b3;
+  margin-left: 5px;
+}
+.add-btn:hover,.add-btn:focus{
+  border: #442d25 solid 2px;
+  
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 1rem;
+  margin: 5px;
+  border: #442d25 solid 1px;
+  border-radius: 5px;
+}
+
+.todo-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-input {
+  border: none;
+  margin: 5px;
+  background: none;
+  font-size: 15px;
+}
+
+.item-input:focus, .item-input:hover {
+  outline: none;
+  background: #ffc7b3;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  background: #442d25;
+  border-radius: 3px;
+  border: #442d25 solid 1px;
+  outline: none;
+}
+.delete-btn:focus,.delete-btn:hover{
+  border: 2px #442d25 solid;
+}
+
+.save-btn {
+  border-radius: 3px;
+  background: #ffc7b3;
+  border: #442d25 solid 1px;
+  margin-right: 5px;
+  outline: none;
+}
+.save-btn:focus,.save-btn:hover{
+  border: 2px #442d25 solid;
+}
+@media(max-width:400px){
+  .item-input{
+    width: 80%;
+    font-size: 12px;
+  }
+  .save-btn{
+    margin-left: 0;
+    margin-right: 2px;
+  }
+}
+#root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.done {
+  text-decoration: line-through;
 }
