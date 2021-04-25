@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Switch, Route, withRouter } from "react-router-dom";
+import "./App.css";
+import SearchForm from "./components/SearchForm";
+import SearchResult from "./components/SearchResult";
 
 function App() {
+  const [user, setUser] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Switch>
+        <Route
+          exact
+          path={process.env.REACT_APP_DEV === "true" ? "/" : "/lab9/build"}
         >
-          Learn React
-        </a>
-      </header>
+          <SearchForm onSearch={(username) => setUser(username)} />
+        </Route>
+        <Route
+          path={
+            process.env.REACT_APP_DEV === "true" ? "/result" : "/lab9/build"
+          }
+        >
+          <SearchResult username={user} />
+        </Route>
+      </Switch>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
