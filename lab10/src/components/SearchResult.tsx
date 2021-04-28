@@ -1,13 +1,28 @@
-import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, RouteComponentProps } from "react-router-dom";
 import LoadingCard from "./LoadingCard";
 import NotFoundCard from "./NotFoundCard";
+import { IUser } from "./types";
 import UserCard from "./UserCard";
 
-const SearchResult = ({ username }) => {
+interface ISearchResultProps extends RouteComponentProps {
+  username: string;
+}
+
+const initialState: IUser = {
+  login: "",
+  name: "",
+  location: "",
+  avatar_url: "",
+  html_url: "",
+  followers: 0,
+  following: 0,
+  blog: "",
+};
+
+const SearchResult: React.FC<ISearchResultProps> = ({ username }) => {
   const [error, setError] = useState(false);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState<IUser>(initialState);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -15,13 +30,13 @@ const SearchResult = ({ username }) => {
       fetch(`https://api.github.com/users/${username}`, {
         method: "GET",
         headers: {
-          Authorization: `Token ${process.env.REACT_APP_KEY}`,
+          Authorization: `Token ${process.env.REACT_APP_LAB10_KEY}`,
         },
       })
         .then((res) => {
           if (res.status === 404) {
             setError(true);
-            return {};
+            return initialState;
           }
           return res.json();
         })
@@ -41,8 +56,6 @@ const SearchResult = ({ username }) => {
   return <UserCard info={user} />;
 };
 
-SearchResult.propTypes = {
-  username: PropTypes.string.isRequired,
-};
-
-export default withRouter(SearchResult);
+export default withRouter<ISearchResultProps, React.FC<ISearchResultProps>>(
+  SearchResult
+);
