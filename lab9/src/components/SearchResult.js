@@ -29,14 +29,9 @@ const SearchResult = ({ username }) => {
     }
   }, [username]);
 
-  // eslint-disable-next-line no-nested-ternary
-  return isLoading ? (
-    <LoadingCard />
-  ) : error ? (
-    <NotFoundCard />
-  ) : (
-    <UserCard info={user} />
-  );
+  if (isLoading) return <LoadingCard />;
+  if (error) return <NotFoundCard />;
+  return <UserCard info={user} />;
 };
 
 SearchResult.propTypes = {
