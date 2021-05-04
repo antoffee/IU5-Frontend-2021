@@ -13,7 +13,10 @@ const SearchResult = ({ username }) => {
   useEffect(() => {
     if (username.trim().length) {
       fetch(`https://api.github.com/users/${username}`, {
-        Authorization: process.env.REACT_APP_KEY,
+        method: "GET",
+        headers: {
+          Authorization: `Token ${process.env.REACT_APP_KEY}`,
+        },
       })
         .then((res) => {
           if (res.status === 404) {
@@ -29,8 +32,12 @@ const SearchResult = ({ username }) => {
     }
   }, [username]);
 
-  if (isLoading) return <LoadingCard />;
-  if (error) return <NotFoundCard />;
+  if (isLoading) {
+    return <LoadingCard />;
+  }
+  if (error) {
+    return <NotFoundCard />;
+  }
   return <UserCard info={user} />;
 };
 
